@@ -9,7 +9,6 @@
 ///
 /// </remarks>
 
-using Microsoft.Xna.Framework.Content.Pipeline;
 using MonoGame.Framework.Content.Pipeline.Builder;
 
 
@@ -23,7 +22,9 @@ var builder = new Builder();
 // We depend on the build arguments from the command line which
 // are typically passed from your game project build commands.
 if (args.Length > 0)
+{
     builder.Run(args);
+}
 
 else
 {
@@ -67,6 +68,8 @@ public class Builder : ContentBuilder
         //        Scale = 100.0f
         //    }
         // );
+
+        content.Include<WildcardRule>("*");
 
         return content;
     }

@@ -7,9 +7,6 @@
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <MonoGamePlatform>Android</MonoGamePlatform>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Source\**\*.cs" />
-  </ItemGroup>
   <!-- Icons, splash art and the resource values that reference them are shared from
        ..\..\Resources and linked back into the Android "Resources" tree. -->
   <ItemGroup>
@@ -22,6 +19,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MonoGame.Framework.Android" Version="$(MonoGameVersion)" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\EmptyGame.Core\EmptyGame.Core.csproj" />
   </ItemGroup>
   <Import Project="..\..\Content\BuildContent.targets" />
 </Project>

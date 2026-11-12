@@ -1,5 +1,6 @@
 using Foundation;
 using UIKit;
+using EmptyGame.Core;
 
 namespace EmptyGame.iOS
 {

@@ -9,9 +9,6 @@
     <MonoGamePlatform>iOS</MonoGamePlatform>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\..\Source\**\*.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="..\..\Resources\iOS\Info.plist">
       <Link>Info.plist</Link>
     </None>
@@ -27,6 +24,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MonoGame.Framework.iOS" Version="$(MonoGameVersion)" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\EmptyGame.Core\EmptyGame.Core.csproj" />
   </ItemGroup>
   <Import Project="..\..\Content\BuildContent.targets" />
 </Project>
